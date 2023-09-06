@@ -1,0 +1,575 @@
+tzubast@LAPTOP-5CHCSEK3:~$ mkdir ilovelinux
+tzubast@LAPTOP-5CHCSEK3:~$ ls
+ilovelinux
+tzubast@LAPTOP-5CHCSEK3:~$ cd ilovelinux && wget http://10.199.16.188:7331/file.txt
+--2023-09-06 23:02:41--  http://10.199.16.188:7331/file.txt
+Connecting to 10.199.16.188:7331... connected.
+HTTP request sent, awaiting response... No data received.
+Retrying.
+
+--2023-09-06 23:02:42--  (try: 2)  http://10.199.16.188:7331/file.txt
+Connecting to 10.199.16.188:7331... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 37 [text/plain]
+Saving to: ‘file.txt’
+
+file.txt              100%[========================>]      37  --.-KB/s    in 0s
+
+2023-09-06 23:02:42 (4.67 MB/s) - ‘file.txt’ saved [37/37]
+
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux$ ls
+file.txt
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux$ tzubastZip $tzubastZip=$ (cat file.txt) && wget http://10.199.16.188:7331/tzubastZip
+-bash: syntax error near unexpected token `('
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux$ tzubastZip $tzubastZip=$ (cat file.txt) && wget http://10.199.16.188:7331/tzubastZip$
+-bash: syntax error near unexpected token `('
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux$ tzubastZip $tzubastZip=$ (cat file.txt) && wget http://10.199.16.188:7331/$tzubastZip
+-bash: syntax error near unexpected token `('
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux$ tzubastZip $tzubastZip=$(cat file.txt) && wget http://10.199.16.188:7331/$tzubastZip
+tzubastZip: command not found
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux$ tzubastZip=$ (cat file.txt) && wget http://10.199.16.188:7331/$tzubastZip
+-bash: syntax error near unexpected token `('
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux$ tzubastZip=$(cat file.txt) && wget http://10.199.16.188:7331/$tzubastZip
+--2023-09-06 23:08:00--  http://10.199.16.188:7331/5bda90afcfd344fa33b8b33580cdbe7b.zipConnecting to 10.199.16.188:7331... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 5177 (5.1K) [application/zip]
+Saving to: ‘5bda90afcfd344fa33b8b33580cdbe7b.zip’
+
+5bda90afcfd344fa33b8b 100%[========================>]   5.06K  --.-KB/s    in 0.008s
+
+2023-09-06 23:08:02 (612 KB/s) - ‘5bda90afcfd344fa33b8b33580cdbe7b.zip’ saved [5177/5177]
+
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux$ unzip $tzubastZip -d latihan
+Archive:  5bda90afcfd344fa33b8b33580cdbe7b.zip
+  inflating: latihan/runme
+  inflating: latihan/.daemon
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux$ cd latihan && ls
+runme
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ .runme > runme.log
+.runme: command not found
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ ./runme > runme.log
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ ls -l
+total 120
+-rw-r--r-- 1 tzubast tzubast 97364 Aug 20 19:21 S3cr3t_f1L3s.zip
+-rwxrwxrwx 1 tzubast tzubast 16776 Aug 20 19:54 runme
+-rw-r--r-- 1 tzubast tzubast   882 Sep  6 23:10 runme.log
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ ./.daemon
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ top
+top - 23:11:35 up 11:10,  1 user,  load average: 0.02, 0.01, 0.00
+Tasks:  34 total,   1 running,  33 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.1 sy,  0.0 ni, 99.9 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st        MiB Mem :   7824.3 total,   6867.8 free,    518.5 used,    437.9 buff/cache
+MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.   7086.2 avail Mem
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+      1 root      20   0  165836  11080   8136 S   0.0   0.1   0:01.14 systemd
+      2 root      20   0    2324   1192   1084 S   0.0   0.0   0:00.02 init-systemd(Ub
+      5 root      20   0    2352     72     68 S   0.0   0.0   0:00.01 init
+     43 root      19  -1   64124  19028  17980 S   0.0   0.2   0:00.60 systemd-journal
+     66 root      20   0   22084   5976   4412 S   0.0   0.1   0:01.21 systemd-udevd
+     76 root      20   0    4496    168     20 S   0.0   0.0   0:00.00 snapfuse
+     77 root      20   0    4496    196     52 S   0.0   0.0   0:00.00 snapfuse
+     80 root      20   0    4852   1776   1304 S   0.0   0.0   0:01.00 snapfuse
+     84 root      20   0    4628    184     32 S   0.0   0.0   0:00.00 snapfuse
+     89 root      20   0    4756   1832   1304 S   0.0   0.0   0:03.67 snapfuse
+     93 root      20   0    4496    192     48 S   0.0   0.0   0:00.00 snapfuse
+     95 root      20   0    4984   1812   1304 S   0.0   0.0   0:01.37 snapfuse
+    150 systemd+  20   0   25260  12228   8284 S   0.0   0.2   0:00.26 systemd-resolve
+    164 root      20   0    4304   2712   2476 S   0.0   0.0   0:00.03 cron
+    167 message+  20   0    8612   4752   4100 S   0.0   0.1   0:00.13 dbus-daemon
+    191 root      20   0   30128  19128  10320 S   0.0   0.2   0:00.30 networkd-dispat
+    192 syslog    20   0  222400   7028   4472 S   0.0   0.1   0:00.06 rsyslogd
+    193 root      20   0 1909876  61880  19888 S   0.0   0.8   0:02.40 snapd
+    194 root      20   0   15348   7400   6404 S   0.0   0.1   0:00.15 systemd-logind
+    220 root      20   0    4776   3384   3148 S   0.0   0.0   0:00.36 subiquity-serve
+    222 root      20   0  107212  20996  12868 S   0.0   0.3   0:00.21 unattended-upgr
+    225 root      20   0    3236   1084    988 S   0.0   0.0   0:00.00 agetty
+    227 root      20   0    3192   1148   1056 S   0.0   0.0   0:00.00 agetty
+    352 root      20   0  803752  82420  22124 S   0.0   1.0   0:14.32 python3.10
+    381 root      20   0    7524   4816   3904 S   0.0   0.1   0:00.01 login
+    419 tzubast   20   0   16900   9168   7724 S   0.0   0.1   0:00.19 systemd
+    420 tzubast   20   0  103228   3464     16 S   0.0   0.0   0:00.00 (sd-pam)
+    426 tzubast   20   0    6120   4996   3388 S   0.0   0.1   0:00.04 bash
+    459 root      20   0   43152  37612  10108 S   0.0   0.5   0:18.71 python3
+   1395 root      20   0    2328    112      0 S   0.0   0.0   0:00.00 SessionLeader
+   1397 root      20   0    2344    116      0 S   0.0   0.0   0:00.27 Relay(1399)
+   1399 tzubast   20   0    6212   5204   3480 S   0.0   0.1   0:00.84 bash
+   1759 tzubast   20   0    2640     92      0 S   0.0   0.0   0:00.00 .daemon
+   1762 tzubast   20   0    7784   3608   3004 R   0.0   0.0   0:00.03 top
+
+
+
+
+
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ ps aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.1 165836 11080 ?        Ss   19:21   0:01 /sbin/init
+root           2  0.0  0.0   2324  1192 ?        Sl   19:21   0:00 /init
+root           5  0.0  0.0   2352    72 ?        Sl   19:21   0:00 plan9 --control-sockroot          43  0.0  0.2  64124 19028 ?        S<s  19:21   0:00 /lib/systemd/systemdroot          66  0.0  0.0  22084  5976 ?        Ss   19:21   0:01 /lib/systemd/systemdroot          76  0.0  0.0   4496   168 ?        Ss   19:21   0:00 snapfuse /var/lib/snroot          77  0.0  0.0   4496   196 ?        Ss   19:21   0:00 snapfuse /var/lib/snroot          80  0.0  0.0   4852  1776 ?        Ss   19:21   0:01 snapfuse /var/lib/snroot          84  0.0  0.0   4628   184 ?        Ss   19:21   0:00 snapfuse /var/lib/snroot          89  0.0  0.0   4756  1832 ?        Ss   19:21   0:03 snapfuse /var/lib/snroot          93  0.0  0.0   4496   192 ?        Ss   19:21   0:00 snapfuse /var/lib/snroot          95  0.0  0.0   4984  1812 ?        Ss   19:21   0:01 snapfuse /var/lib/snsystemd+     150  0.0  0.1  25260 12228 ?        Ss   19:21   0:00 /lib/systemd/systemdroot         164  0.0  0.0   4304  2712 ?        Ss   19:21   0:00 /usr/sbin/cron -f -Pmessage+     167  0.0  0.0   8612  4752 ?        Ss   19:21   0:00 @dbus-daemon --systeroot         191  0.0  0.2  30128 19128 ?        Ss   19:21   0:00 /usr/bin/python3 /ussyslog       192  0.0  0.0 222400  7028 ?        Ssl  19:21   0:00 /usr/sbin/rsyslogd -root         193  0.0  0.7 1909876 61880 ?       Ssl  19:21   0:02 /usr/lib/snapd/snapdroot         194  0.0  0.0  15348  7400 ?        Ss   19:21   0:00 /lib/systemd/systemdroot         220  0.0  0.0   4776  3384 ?        Ss   19:21   0:00 /bin/bash /snap/ubunroot         222  0.0  0.2 107212 20996 ?        Ssl  19:21   0:00 /usr/bin/python3 /usroot         225  0.0  0.0   3236  1084 hvc0     Ss+  19:21   0:00 /sbin/agetty -o -p -root         227  0.0  0.0   3192  1148 tty1     Ss+  19:21   0:00 /sbin/agetty -o -p -root         352  0.1  1.0 803752 82420 ?        Sl   19:21   0:14 /snap/ubuntu-desktoproot         381  0.0  0.0   7524  4816 pts/1    Ss   19:21   0:00 /bin/login -f
+tzubast      419  0.0  0.1  16900  9168 ?        Ss   19:21   0:00 /lib/systemd/systemdtzubast      420  0.0  0.0 103228  3464 ?        S    19:21   0:00 (sd-pam)
+tzubast      426  0.0  0.0   6120  4996 pts/1    S+   19:21   0:00 -bash
+root         459  0.1  0.4  43152 37612 ?        S    19:21   0:18 python3 /snap/ubunturoot        1395  0.0  0.0   2328   112 ?        Ss   21:13   0:00 /init
+root        1397  0.0  0.0   2344   116 ?        R    21:13   0:00 /init
+tzubast     1399  0.0  0.0   6212  5204 pts/0    Ss   21:13   0:00 -bash
+tzubast     1759  0.0  0.0   2640    92 ?        Ss   23:11   0:00 ./.daemon
+tzubast     1763  0.0  0.0   7480  3144 pts/0    R+   23:11   0:00 ps aux
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ pkill .daemon && top
+pkill: killing pid 167 failed: Operation not permitted
+top - 23:12:41 up 11:11,  1 user,  load average: 0.00, 0.00, 0.00
+Tasks:  33 total,   1 running,  32 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :   7824.3 total,   6870.0 free,    516.3 used,    437.9 buff/cache
+MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.   7088.4 avail Mem
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    459 root      20   0   43152  37612  10108 S   0.3   0.5   0:18.86 python3
+      1 root      20   0  165836  11080   8136 S   0.0   0.1   0:01.14 systemd
+      2 root      20   0    2324   1192   1084 S   0.0   0.0   0:00.02 init-systemd(Ub
+      5 root      20   0    2352     72     68 S   0.0   0.0   0:00.01 init
+     43 root      19  -1   64124  19028  17980 S   0.0   0.2   0:00.60 systemd-journal
+     66 root      20   0   22084   5976   4412 S   0.0   0.1   0:01.22 systemd-udevd
+     76 root      20   0    4496    168     20 S   0.0   0.0   0:00.00 snapfuse
+     77 root      20   0    4496    196     52 S   0.0   0.0   0:00.00 snapfuse
+     80 root      20   0    4852   1776   1304 S   0.0   0.0   0:01.00 snapfuse
+     84 root      20   0    4628    184     32 S   0.0   0.0   0:00.00 snapfuse
+     89 root      20   0    4756   1832   1304 S   0.0   0.0   0:03.67 snapfuse
+     93 root      20   0    4496    192     48 S   0.0   0.0   0:00.00 snapfuse
+     95 root      20   0    4984   1812   1304 S   0.0   0.0   0:01.37 snapfuse
+    150 systemd+  20   0   25260  12228   8284 S   0.0   0.2   0:00.26 systemd-resolve
+    164 root      20   0    4304   2712   2476 S   0.0   0.0   0:00.03 cron
+    167 message+  20   0    8612   4752   4100 S   0.0   0.1   0:00.13 dbus-daemon
+    191 root      20   0   30128  19128  10320 S   0.0   0.2   0:00.30 networkd-dispat
+    192 syslog    20   0  222400   7028   4472 S   0.0   0.1   0:00.06 rsyslogd
+    193 root      20   0 1909876  61880  19888 S   0.0   0.8   0:02.41 snapd
+    194 root      20   0   15348   7400   6404 S   0.0   0.1   0:00.15 systemd-logind
+    220 root      20   0    4776   3384   3148 S   0.0   0.0   0:00.36 subiquity-serve
+    222 root      20   0  107212  20996  12868 S   0.0   0.3   0:00.21 unattended-upgr
+    225 root      20   0    3236   1084    988 S   0.0   0.0   0:00.00 agetty
+    227 root      20   0    3192   1148   1056 S   0.0   0.0   0:00.00 agetty
+    352 root      20   0  803752  82420  22124 S   0.0   1.0   0:14.41 python3.10
+    381 root      20   0    7524   4816   3904 S   0.0   0.1   0:00.01 login
+    419 tzubast   20   0   16900   9168   7724 S   0.0   0.1   0:00.19 systemd
+    420 tzubast   20   0  103228   3464     16 S   0.0   0.0   0:00.00 (sd-pam)
+    426 tzubast   20   0    6120   4996   3388 S   0.0   0.1   0:00.04 bash
+   1395 root      20   0    2328    112      0 S   0.0   0.0   0:00.00 SessionLeader
+   1397 root      20   0    2344    116      0 S   0.0   0.0   0:00.29 Relay(1399)
+   1399 tzubast   20   0    6212   5204   3480 S   0.0   0.1   0:00.86 bash
+   1767 tzubast   20   0    7784   3688   3084 R   0.0   0.0   0:00.00 top
+
+
+
+
+
+
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-network:x:100:102:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin
+systemd-resolve:x:101:103:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
+messagebus:x:102:105::/nonexistent:/usr/sbin/nologin
+systemd-timesync:x:103:106:systemd Time Synchronization,,,:/run/systemd:/usr/sbin/nologin
+syslog:x:104:111::/home/syslog:/usr/sbin/nologin
+_apt:x:105:65534::/nonexistent:/usr/sbin/nologin
+uuidd:x:106:112::/run/uuidd:/usr/sbin/nologin
+tcpdump:x:107:113::/nonexistent:/usr/sbin/nologin
+tzubast:x:1000:1000:,,,:/home/tzubast:/bin/bash
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ sudo adduser jagosisop
+[sudo] password for tzubast:
+Adding user `jagosisop' ...
+Adding new group `jagosisop' (1001) ...
+Adding new user `jagosisop' (1001) with group `jagosisop' ...
+The home directory `/home/jagosisop' already exists.  Not copying from `/etc/skel'.
+New password:
+Retype new password:
+Sorry, passwords do not match.
+passwd: Authentication token manipulation error
+passwd: password unchanged
+Try again? [y/N] y
+New password:
+Retype new password:
+passwd: password updated successfully
+Changing the user information for jagosisop
+Enter the new value, or press ENTER for the default
+        Full Name []:
+        Room Number []:
+        Work Phone []:
+        Home Phone []:
+        Other []:
+Is the information correct? [Y/n] y
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ sudo adduser jagosisop sudo
+Adding user `jagosisop' to group `sudo' ...
+Adding user jagosisop to group sudo
+Done.
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ getent sudo group
+Unknown database: sudo
+Try `getent --help' or `getent --usage' for more information.
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ getent group sudo
+sudo:x:27:tzubast,jagosisop
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ su - jagosisop -c 'mkdir ~/analysis'
+Password:
+mkdir: cannot create directory ‘/home/jagosisop/analysis’: File exists
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ su - tzubast -s /bin/bash -c 'cd ~/ilovelinux/latihan && exec bash'
+Password:
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ unzip S3cr3t_f1L3s.zip
+Archive:  S3cr3t_f1L3s.zip
+   creating: dump/
+   creating: dump/7PXcZw75Kv/
+   creating: dump/7PXcZw75Kv/H78NoiDUOF/
+  inflating: dump/7PXcZw75Kv/H78NoiDUOF/06-23-2023_10:57_PM.log
+   creating: dump/7PXcZw75Kv/H78NoiDUOF/DN3cx6SLoF/
+  inflating: dump/7PXcZw75Kv/H78NoiDUOF/DN3cx6SLoF/02-07-2023_11:14_PM.log
+   creating: dump/7PXcZw75Kv/H78NoiDUOF/DN3cx6SLoF/ufmHo96ljv/
+   creating: dump/BpiB4Xb0WH/
+   creating: dump/BpiB4Xb0WH/ZhBG7nYMPs/
+  inflating: dump/BpiB4Xb0WH/ZhBG7nYMPs/01-13-2023_02:23_AM.log
+   creating: dump/BpiB4Xb0WH/ZhBG7nYMPs/C9FTgAnC6o/
+  inflating: dump/BpiB4Xb0WH/ZhBG7nYMPs/C9FTgAnC6o/05-02-2023_03:07_AM.log
+   creating: dump/BpiB4Xb0WH/ZhBG7nYMPs/C9FTgAnC6o/dmpaTNflIp/
+  inflating: dump/BpiB4Xb0WH/ZhBG7nYMPs/C9FTgAnC6o/dmpaTNflIp/07-28-2023_12:29_AM.log
+   creating: dump/BpiB4Xb0WH/ZhBG7nYMPs/C9FTgAnC6o/dmpaTNflIp/lJZ3KiPgKU/
+   creating: dump/czUT5NoIEO/
+   creating: dump/czUT5NoIEO/ONMaSDVNnN/
+  inflating: dump/czUT5NoIEO/ONMaSDVNnN/04-30-2023_09:33_PM.log
+   creating: dump/czUT5NoIEO/ONMaSDVNnN/30yAzy36TT/
+  inflating: dump/czUT5NoIEO/ONMaSDVNnN/30yAzy36TT/01-03-2023_02:05_AM.log
+   creating: dump/czUT5NoIEO/ONMaSDVNnN/30yAzy36TT/H4qNvzki0V/
+  inflating: dump/czUT5NoIEO/ONMaSDVNnN/30yAzy36TT/H4qNvzki0V/01-27-2023_07:16_AM.log
+   creating: dump/czUT5NoIEO/ONMaSDVNnN/30yAzy36TT/H4qNvzki0V/ZXP4pp7MFP/
+   creating: dump/DWdwYzlv3i/
+   creating: dump/DWdwYzlv3i/kzfjdSDZLJ/
+  inflating: dump/DWdwYzlv3i/kzfjdSDZLJ/07-11-2023_11:43_AM.log
+   creating: dump/DWdwYzlv3i/kzfjdSDZLJ/h6cF5SXwLs/
+   creating: dump/dXK40eZGoT/
+   creating: dump/dXK40eZGoT/4aJEyFG21a/
+  inflating: dump/dXK40eZGoT/4aJEyFG21a/02-06-2023_06:18_PM.log
+   creating: dump/dXK40eZGoT/4aJEyFG21a/Tt6qarg9PJ/
+   creating: dump/fWC6i3JXm8/
+   creating: dump/fWC6i3JXm8/2QgVbGksas/
+  inflating: dump/fWC6i3JXm8/2QgVbGksas/05-09-2023_10:37_AM.log
+   creating: dump/fWC6i3JXm8/2QgVbGksas/FYnfTc0bO0/
+  inflating: dump/fWC6i3JXm8/2QgVbGksas/FYnfTc0bO0/06-24-2023_05:33_AM.log
+   creating: dump/fWC6i3JXm8/2QgVbGksas/FYnfTc0bO0/9vZV91ULMb/
+  inflating: dump/fWC6i3JXm8/2QgVbGksas/FYnfTc0bO0/9vZV91ULMb/01-06-2023_04:54_AM.log
+   creating: dump/fWC6i3JXm8/2QgVbGksas/FYnfTc0bO0/9vZV91ULMb/mWG2OlEgwZ/
+   creating: dump/FXe1lvNI3a/
+   creating: dump/FXe1lvNI3a/pUCpL2KiIK/
+  inflating: dump/FXe1lvNI3a/pUCpL2KiIK/07-05-2023_06:14_PM.log
+   creating: dump/FXe1lvNI3a/pUCpL2KiIK/z1VF5KH4xh/
+  inflating: dump/FXe1lvNI3a/pUCpL2KiIK/z1VF5KH4xh/01-18-2023_08:32_AM.log
+   creating: dump/FXe1lvNI3a/pUCpL2KiIK/z1VF5KH4xh/FAJR5IJKHe/
+  inflating: dump/FXe1lvNI3a/pUCpL2KiIK/z1VF5KH4xh/FAJR5IJKHe/06-08-2023_11:22_PM.log
+   creating: dump/FXe1lvNI3a/pUCpL2KiIK/z1VF5KH4xh/FAJR5IJKHe/QTdomX2DsB/
+   creating: dump/FXiGk3JunQ/
+   creating: dump/FXiGk3JunQ/E3Sv481Zl3/
+  inflating: dump/FXiGk3JunQ/E3Sv481Zl3/04-06-2023_01:19_AM.log
+   creating: dump/FXiGk3JunQ/E3Sv481Zl3/3mrz6EpRMf/
+   creating: dump/GAZags508D/
+   creating: dump/GAZags508D/mGhfV4DJaw/
+  inflating: dump/GAZags508D/mGhfV4DJaw/03-04-2023_06:19_PM.log
+   creating: dump/GAZags508D/mGhfV4DJaw/U94CanJil8/
+  inflating: dump/GAZags508D/mGhfV4DJaw/U94CanJil8/03-22-2023_01:30_PM.log
+   creating: dump/GAZags508D/mGhfV4DJaw/U94CanJil8/bONr6jEKQg/
+  inflating: dump/GAZags508D/mGhfV4DJaw/U94CanJil8/bONr6jEKQg/02-25-2023_07:56_AM.log
+   creating: dump/GAZags508D/mGhfV4DJaw/U94CanJil8/bONr6jEKQg/VPpDbH9HUk/
+   creating: dump/GDP8FcrzsT/
+   creating: dump/GDP8FcrzsT/204MyQfX6q/
+  inflating: dump/GDP8FcrzsT/204MyQfX6q/07-06-2023_08:19_AM.log
+   creating: dump/GDP8FcrzsT/204MyQfX6q/OLFD3jlzYs/
+  inflating: dump/GDP8FcrzsT/204MyQfX6q/OLFD3jlzYs/03-22-2023_09:05_PM.log
+   creating: dump/GDP8FcrzsT/204MyQfX6q/OLFD3jlzYs/6CoGdcFk10/
+  inflating: dump/GDP8FcrzsT/204MyQfX6q/OLFD3jlzYs/6CoGdcFk10/07-31-2023_08:27_AM.log
+   creating: dump/GDP8FcrzsT/204MyQfX6q/OLFD3jlzYs/6CoGdcFk10/siVbwPqUeM/
+   creating: dump/gVPQhubGcZ/
+   creating: dump/gVPQhubGcZ/aBLckD8kq8/
+  inflating: dump/gVPQhubGcZ/aBLckD8kq8/01-25-2023_11:09_AM.log
+   creating: dump/gVPQhubGcZ/aBLckD8kq8/FIoxrBQARQ/
+  inflating: dump/gVPQhubGcZ/aBLckD8kq8/FIoxrBQARQ/06-29-2023_06:25_PM.log
+   creating: dump/gVPQhubGcZ/aBLckD8kq8/FIoxrBQARQ/WGhQP2cr4d/
+  inflating: dump/gVPQhubGcZ/aBLckD8kq8/FIoxrBQARQ/WGhQP2cr4d/01-09-2023_02:07_AM.log
+   creating: dump/gVPQhubGcZ/aBLckD8kq8/FIoxrBQARQ/WGhQP2cr4d/2tpelxsZEU/
+   creating: dump/gvuDA0AAQr/
+   creating: dump/gvuDA0AAQr/67BzwH3QoC/
+  inflating: dump/gvuDA0AAQr/67BzwH3QoC/07-09-2023_10:32_AM.log
+   creating: dump/gvuDA0AAQr/67BzwH3QoC/U3h4N2bb0B/
+  inflating: dump/gvuDA0AAQr/67BzwH3QoC/U3h4N2bb0B/05-30-2023_06:37_PM.log
+   creating: dump/gvuDA0AAQr/67BzwH3QoC/U3h4N2bb0B/w5DQBNwBno/
+   creating: dump/he8vE8Y184/
+   creating: dump/he8vE8Y184/LY2gp6TC2t/
+  inflating: dump/he8vE8Y184/LY2gp6TC2t/07-10-2023_01:15_PM.log
+   creating: dump/he8vE8Y184/LY2gp6TC2t/oALkmkEkqr/
+   creating: dump/HLzrYyQlgx/
+   creating: dump/HLzrYyQlgx/rlfUrzRvAy/
+  inflating: dump/HLzrYyQlgx/rlfUrzRvAy/01-04-2023_07:16_PM.log
+   creating: dump/HLzrYyQlgx/rlfUrzRvAy/Sh3VcQtHjU/
+   creating: dump/Ho36cpL57c/
+   creating: dump/Ho36cpL57c/KQVPGiY27Z/
+  inflating: dump/Ho36cpL57c/KQVPGiY27Z/05-26-2023_10:18_AM.log
+   creating: dump/Ho36cpL57c/KQVPGiY27Z/eiBmLC1v6o/
+  inflating: dump/Ho36cpL57c/KQVPGiY27Z/eiBmLC1v6o/06-13-2023_03:29_PM.log
+   creating: dump/Ho36cpL57c/KQVPGiY27Z/eiBmLC1v6o/TaEu2u1H84/
+   creating: dump/I2HvX3Nnmu/
+   creating: dump/I2HvX3Nnmu/Bcbn1T7YCS/
+  inflating: dump/I2HvX3Nnmu/Bcbn1T7YCS/07-11-2023_10:42_PM.log
+   creating: dump/I2HvX3Nnmu/Bcbn1T7YCS/AVEl49vgtB/
+  inflating: dump/I2HvX3Nnmu/Bcbn1T7YCS/AVEl49vgtB/05-06-2023_10:40_AM.log
+   creating: dump/I2HvX3Nnmu/Bcbn1T7YCS/AVEl49vgtB/QviceLiC6Q/
+   creating: dump/Iir9DOlIB4/
+   creating: dump/Iir9DOlIB4/UOJhDJx3i0/
+  inflating: dump/Iir9DOlIB4/UOJhDJx3i0/05-08-2023_05:46_AM.log
+   creating: dump/Iir9DOlIB4/UOJhDJx3i0/7RKEYcxZzC/
+   creating: dump/j9ltdRQIrW/
+   creating: dump/j9ltdRQIrW/FTZlNTWGdK/
+  inflating: dump/j9ltdRQIrW/FTZlNTWGdK/03-10-2023_01:47_AM.log
+   creating: dump/j9ltdRQIrW/FTZlNTWGdK/IKuStrN5sT/
+  inflating: dump/j9ltdRQIrW/FTZlNTWGdK/IKuStrN5sT/05-16-2023_04:06_AM.log
+   creating: dump/j9ltdRQIrW/FTZlNTWGdK/IKuStrN5sT/F7teCIqpoP/
+  inflating: dump/j9ltdRQIrW/FTZlNTWGdK/IKuStrN5sT/F7teCIqpoP/02-15-2023_06:56_AM.log
+   creating: dump/j9ltdRQIrW/FTZlNTWGdK/IKuStrN5sT/F7teCIqpoP/QKW2jrsvc6/
+   creating: dump/kcDvNyTGji/
+   creating: dump/kcDvNyTGji/f7l82LOj1X/
+  inflating: dump/kcDvNyTGji/f7l82LOj1X/02-17-2023_03:02_AM.log
+   creating: dump/kcDvNyTGji/f7l82LOj1X/YHBJAbEzLv/
+   creating: dump/kFV2l8BV3e/
+   creating: dump/kFV2l8BV3e/Xar8kRb7Op/
+  inflating: dump/kFV2l8BV3e/Xar8kRb7Op/01-16-2023_05:06_AM.log
+   creating: dump/kFV2l8BV3e/Xar8kRb7Op/dfhrihBSXC/
+  inflating: dump/kFV2l8BV3e/Xar8kRb7Op/dfhrihBSXC/01-04-2023_02:53_PM.log
+   creating: dump/kFV2l8BV3e/Xar8kRb7Op/dfhrihBSXC/VDQhxz6hOB/
+   creating: dump/lByGDkUtPE/
+   creating: dump/lByGDkUtPE/vIYovvOgx4/
+  inflating: dump/lByGDkUtPE/vIYovvOgx4/06-03-2023_11:54_AM.log
+   creating: dump/lByGDkUtPE/vIYovvOgx4/SCVk4UVioK/
+  inflating: dump/lByGDkUtPE/vIYovvOgx4/SCVk4UVioK/05-29-2023_01:37_AM.log
+   creating: dump/lByGDkUtPE/vIYovvOgx4/SCVk4UVioK/An0R4LlWy4/
+  inflating: dump/lByGDkUtPE/vIYovvOgx4/SCVk4UVioK/An0R4LlWy4/03-09-2023_05:29_AM.log
+   creating: dump/lByGDkUtPE/vIYovvOgx4/SCVk4UVioK/An0R4LlWy4/jjAEtkjDxF/
+   creating: dump/lcl31HI5aY/
+   creating: dump/lcl31HI5aY/VMZcLigYsS/
+  inflating: dump/lcl31HI5aY/VMZcLigYsS/04-06-2023_08:15_PM.log
+   creating: dump/lcl31HI5aY/VMZcLigYsS/O8y0caZAPF/
+   creating: dump/LOgPdgCGsG/
+   creating: dump/LOgPdgCGsG/6gPFAE8f83/
+  inflating: dump/LOgPdgCGsG/6gPFAE8f83/04-02-2023_08:25_PM.log
+   creating: dump/LOgPdgCGsG/6gPFAE8f83/Dg9tIssxfu/
+   creating: dump/LRh6iwIrve/
+   creating: dump/LRh6iwIrve/EcIMAf4oW7/
+  inflating: dump/LRh6iwIrve/EcIMAf4oW7/04-30-2023_10:11_AM.log
+   creating: dump/LRh6iwIrve/EcIMAf4oW7/zlCLNc9Ycy/
+  inflating: dump/LRh6iwIrve/EcIMAf4oW7/zlCLNc9Ycy/07-25-2023_01:33_PM.log
+   creating: dump/LRh6iwIrve/EcIMAf4oW7/zlCLNc9Ycy/d5uk4Rq6lZ/
+  inflating: dump/LRh6iwIrve/EcIMAf4oW7/zlCLNc9Ycy/d5uk4Rq6lZ/01-13-2023_05:47_AM.log
+   creating: dump/LRh6iwIrve/EcIMAf4oW7/zlCLNc9Ycy/d5uk4Rq6lZ/9U37spLnSR/
+   creating: dump/MC0rDKJaDh/
+   creating: dump/MC0rDKJaDh/zvIVxWX0TR/
+  inflating: dump/MC0rDKJaDh/zvIVxWX0TR/06-18-2023_02:05_PM.log
+   creating: dump/MC0rDKJaDh/zvIVxWX0TR/8AOISBmahv/
+  inflating: dump/MC0rDKJaDh/zvIVxWX0TR/8AOISBmahv/04-21-2023_08:19_PM.log
+   creating: dump/MC0rDKJaDh/zvIVxWX0TR/8AOISBmahv/Etcph7J0cG/
+  inflating: dump/MC0rDKJaDh/zvIVxWX0TR/8AOISBmahv/Etcph7J0cG/06-10-2023_10:19_AM.log
+   creating: dump/MC0rDKJaDh/zvIVxWX0TR/8AOISBmahv/Etcph7J0cG/SJOndZfbeV/
+   creating: dump/miCNIK2XjV/
+   creating: dump/miCNIK2XjV/ezVQsmPJiS/
+  inflating: dump/miCNIK2XjV/ezVQsmPJiS/07-02-2023_11:38_PM.log
+   creating: dump/miCNIK2XjV/ezVQsmPJiS/qhBCGoUWu4/
+  inflating: dump/miCNIK2XjV/ezVQsmPJiS/qhBCGoUWu4/02-18-2023_05:25_AM.log
+   creating: dump/miCNIK2XjV/ezVQsmPJiS/qhBCGoUWu4/MufrGD2H32/
+  inflating: dump/miCNIK2XjV/ezVQsmPJiS/qhBCGoUWu4/MufrGD2H32/04-06-2023_11:54_AM.log
+   creating: dump/miCNIK2XjV/ezVQsmPJiS/qhBCGoUWu4/MufrGD2H32/xbgXyhJWzH/
+   creating: dump/mwwzRNNVr4/
+   creating: dump/mwwzRNNVr4/Bi2K8241EF/
+  inflating: dump/mwwzRNNVr4/Bi2K8241EF/06-30-2023_01:43_AM.log
+   creating: dump/mwwzRNNVr4/Bi2K8241EF/ADa63mxsoQ/
+   creating: dump/Mz4UwytH6Q/
+   creating: dump/Mz4UwytH6Q/hn9Equm5k2/
+  inflating: dump/Mz4UwytH6Q/hn9Equm5k2/03-13-2023_12:37_PM.log
+   creating: dump/Mz4UwytH6Q/hn9Equm5k2/w4Wc4Ks2in/
+  inflating: dump/Mz4UwytH6Q/hn9Equm5k2/w4Wc4Ks2in/05-25-2023_07:42_AM.log
+   creating: dump/Mz4UwytH6Q/hn9Equm5k2/w4Wc4Ks2in/1ZAmmLtS7e/
+  inflating: dump/Mz4UwytH6Q/hn9Equm5k2/w4Wc4Ks2in/1ZAmmLtS7e/04-04-2023_07:29_PM.log
+   creating: dump/Mz4UwytH6Q/hn9Equm5k2/w4Wc4Ks2in/1ZAmmLtS7e/gBssCmiriH/
+   creating: dump/NftDzEAOtN/
+   creating: dump/NftDzEAOtN/GylIjD48vE/
+  inflating: dump/NftDzEAOtN/GylIjD48vE/05-28-2023_02:46_AM.log
+   creating: dump/NftDzEAOtN/GylIjD48vE/PSBFnm7jAC/
+   creating: dump/NNmTmwy1C2/
+   creating: dump/NNmTmwy1C2/FiCYANgiAx/
+  inflating: dump/NNmTmwy1C2/FiCYANgiAx/02-02-2023_05:19_PM.log
+   creating: dump/NNmTmwy1C2/FiCYANgiAx/RK3qnQl1ES/
+   creating: dump/opAiFF5WI9/
+   creating: dump/opAiFF5WI9/C9bRpMPFOL/
+  inflating: dump/opAiFF5WI9/C9bRpMPFOL/05-21-2023_04:36_AM.log
+   creating: dump/opAiFF5WI9/C9bRpMPFOL/2ThnKXBZ0P/
+  inflating: dump/opAiFF5WI9/C9bRpMPFOL/2ThnKXBZ0P/04-18-2023_03:54_AM.log
+   creating: dump/opAiFF5WI9/C9bRpMPFOL/2ThnKXBZ0P/SE6X0nN37k/
+  inflating: dump/opAiFF5WI9/C9bRpMPFOL/2ThnKXBZ0P/SE6X0nN37k/07-27-2023_04:11_PM.log
+   creating: dump/opAiFF5WI9/C9bRpMPFOL/2ThnKXBZ0P/SE6X0nN37k/pEuMb0r5H2/
+   creating: dump/PSUb7xLiPN/
+   creating: dump/PSUb7xLiPN/uvDLJeagjF/
+  inflating: dump/PSUb7xLiPN/uvDLJeagjF/04-08-2023_05:16_PM.log
+   creating: dump/PSUb7xLiPN/uvDLJeagjF/OozbnsrnTQ/
+  inflating: dump/PSUb7xLiPN/uvDLJeagjF/OozbnsrnTQ/05-21-2023_06:11_AM.log
+   creating: dump/PSUb7xLiPN/uvDLJeagjF/OozbnsrnTQ/fKG3VhPpzq/
+  inflating: dump/PSUb7xLiPN/uvDLJeagjF/OozbnsrnTQ/fKG3VhPpzq/07-03-2023_07:56_AM.log
+   creating: dump/PSUb7xLiPN/uvDLJeagjF/OozbnsrnTQ/fKG3VhPpzq/a2SUkKuKVd/
+   creating: dump/qFadfFFcoJ/
+   creating: dump/qFadfFFcoJ/4UAYHFw5E2/
+  inflating: dump/qFadfFFcoJ/4UAYHFw5E2/06-09-2023_05:27_PM.log
+   creating: dump/qFadfFFcoJ/4UAYHFw5E2/gxCeGXMUNV/
+   creating: dump/RSrtciONeL/
+   creating: dump/RSrtciONeL/sEAke0L4rk/
+  inflating: dump/RSrtciONeL/sEAke0L4rk/01-06-2023_04:48_AM.log
+   creating: dump/RSrtciONeL/sEAke0L4rk/yLBWrgNtm3/
+  inflating: dump/RSrtciONeL/sEAke0L4rk/yLBWrgNtm3/05-28-2023_10:18_PM.log
+   creating: dump/RSrtciONeL/sEAke0L4rk/yLBWrgNtm3/Jy2nqpwtkT/
+  inflating: dump/RSrtciONeL/sEAke0L4rk/yLBWrgNtm3/Jy2nqpwtkT/07-15-2023_04:00_PM.log
+   creating: dump/RSrtciONeL/sEAke0L4rk/yLBWrgNtm3/Jy2nqpwtkT/R4mUun1nGG/
+   creating: dump/s78xdIb24B/
+   creating: dump/s78xdIb24B/N20PpNRsX2/
+  inflating: dump/s78xdIb24B/N20PpNRsX2/05-08-2023_02:56_PM.log
+   creating: dump/s78xdIb24B/N20PpNRsX2/yF6dKzfn2e/
+   creating: dump/SMt9JB74Q4/
+   creating: dump/SMt9JB74Q4/6k5GTBIwxu/
+  inflating: dump/SMt9JB74Q4/6k5GTBIwxu/07-19-2023_08:33_AM.log
+   creating: dump/SMt9JB74Q4/6k5GTBIwxu/M6eaL2JImV/
+  inflating: dump/SMt9JB74Q4/6k5GTBIwxu/M6eaL2JImV/06-21-2023_05:09_PM.log
+   creating: dump/SMt9JB74Q4/6k5GTBIwxu/M6eaL2JImV/bC1wOuu1C3/
+   creating: dump/spWxfw3b4M/
+   creating: dump/spWxfw3b4M/bvsI1sVvnF/
+  inflating: dump/spWxfw3b4M/bvsI1sVvnF/06-05-2023_05:41_AM.log
+   creating: dump/spWxfw3b4M/bvsI1sVvnF/1baBOECEPb/
+  inflating: dump/spWxfw3b4M/bvsI1sVvnF/1baBOECEPb/06-27-2023_05:37_PM.log
+   creating: dump/spWxfw3b4M/bvsI1sVvnF/1baBOECEPb/TGo3VuMXU8/
+  inflating: dump/spWxfw3b4M/bvsI1sVvnF/1baBOECEPb/TGo3VuMXU8/03-13-2023_10:35_PM.log
+   creating: dump/spWxfw3b4M/bvsI1sVvnF/1baBOECEPb/TGo3VuMXU8/hduU0eK2ng/
+   creating: dump/TXExu1HD6H/
+   creating: dump/TXExu1HD6H/QKKtBA3Irt/
+  inflating: dump/TXExu1HD6H/QKKtBA3Irt/06-05-2023_03:31_AM.log
+   creating: dump/TXExu1HD6H/QKKtBA3Irt/k0svV9WuRO/
+  inflating: dump/TXExu1HD6H/QKKtBA3Irt/k0svV9WuRO/05-21-2023_03:22_AM.log
+   creating: dump/TXExu1HD6H/QKKtBA3Irt/k0svV9WuRO/oQrFhjmUCK/
+   creating: dump/UpkwyCmQSo/
+   creating: dump/UpkwyCmQSo/fjZeUzybdt/
+  inflating: dump/UpkwyCmQSo/fjZeUzybdt/01-24-2023_02:46_AM.log
+   creating: dump/UpkwyCmQSo/fjZeUzybdt/JKsVgUZJNb/
+  inflating: dump/UpkwyCmQSo/fjZeUzybdt/JKsVgUZJNb/03-15-2023_03:54_PM.log
+   creating: dump/UpkwyCmQSo/fjZeUzybdt/JKsVgUZJNb/ddZ5Ne7aW0/
+  inflating: dump/UpkwyCmQSo/fjZeUzybdt/JKsVgUZJNb/ddZ5Ne7aW0/07-04-2023_11:26_AM.log
+   creating: dump/UpkwyCmQSo/fjZeUzybdt/JKsVgUZJNb/ddZ5Ne7aW0/ATRERkMtLc/
+   creating: dump/uuk97mtzup/
+   creating: dump/uuk97mtzup/v5KfBK7ZMX/
+  inflating: dump/uuk97mtzup/v5KfBK7ZMX/03-14-2023_12:19_PM.log
+   creating: dump/uuk97mtzup/v5KfBK7ZMX/t3DBL2ePmQ/
+   creating: dump/WlYCQQSXwZ/
+   creating: dump/WlYCQQSXwZ/kK5eqiYUrt/
+  inflating: dump/WlYCQQSXwZ/kK5eqiYUrt/05-22-2023_04:57_PM.log
+   creating: dump/WlYCQQSXwZ/kK5eqiYUrt/xS7prwTpI8/
+  inflating: dump/WlYCQQSXwZ/kK5eqiYUrt/xS7prwTpI8/07-05-2023_04:04_PM.log
+   creating: dump/WlYCQQSXwZ/kK5eqiYUrt/xS7prwTpI8/x7sHUUmAXe/
+   creating: dump/WVjJWGR1fs/
+   creating: dump/WVjJWGR1fs/v0QtuVzmVn/
+  inflating: dump/WVjJWGR1fs/v0QtuVzmVn/03-24-2023_12:11_PM.log
+   creating: dump/WVjJWGR1fs/v0QtuVzmVn/mIbxIlZO2K/
+  inflating: dump/WVjJWGR1fs/v0QtuVzmVn/mIbxIlZO2K/05-18-2023_06:49_PM.log
+   creating: dump/WVjJWGR1fs/v0QtuVzmVn/mIbxIlZO2K/9TvP1BdFf5/
+   creating: dump/xpFKCwP1PP/
+   creating: dump/xpFKCwP1PP/N0OJlsLENL/
+  inflating: dump/xpFKCwP1PP/N0OJlsLENL/01-21-2023_04:12_AM.log
+   creating: dump/xpFKCwP1PP/N0OJlsLENL/HYMugAFqgq/
+  inflating: dump/xpFKCwP1PP/N0OJlsLENL/HYMugAFqgq/03-24-2023_12:39_AM.log
+   creating: dump/xpFKCwP1PP/N0OJlsLENL/HYMugAFqgq/ZOR4P1Tar5/
+   creating: dump/yNGRGRYTLM/
+   creating: dump/yNGRGRYTLM/SDtgq0KuKY/
+  inflating: dump/yNGRGRYTLM/SDtgq0KuKY/02-25-2023_06:06_AM.log
+   creating: dump/yNGRGRYTLM/SDtgq0KuKY/mCdvkR5mqp/
+  inflating: dump/yNGRGRYTLM/SDtgq0KuKY/mCdvkR5mqp/01-02-2023_03:31_AM.log
+   creating: dump/yNGRGRYTLM/SDtgq0KuKY/mCdvkR5mqp/EKAt4ceJap/
+   creating: dump/zm94inuZ8j/
+   creating: dump/zm94inuZ8j/ffGn6Z2YBo/
+  inflating: dump/zm94inuZ8j/ffGn6Z2YBo/02-07-2023_10:45_PM.log
+   creating: dump/zm94inuZ8j/ffGn6Z2YBo/ZQvHqlzLR3/
+  inflating: dump/zm94inuZ8j/ffGn6Z2YBo/ZQvHqlzLR3/06-18-2023_03:07_PM.log
+   creating: dump/zm94inuZ8j/ffGn6Z2YBo/ZQvHqlzLR3/bc17Ag792q/
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ find ~/ilovelinux/latihan - type f -name "*.log"-exec ls -lt{} + |awk '($7, $8, $9)'| head n-1 > http.txt
+find: paths must precede expression: `ls'
+awk: cmd. line:2: ($7, $8, $9)
+awk: cmd. line:2:             ^ unexpected newline or end of string
+head: cannot open 'n-1' for reading: No such file or directory
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ find ~/ilovelinux/latihan - type f -name "*.log"-exec ls -lt{} + |awk '(print $7, $8, $9)'| head -n 1 > http.txt
+find: paths must precede expression: `ls'
+awk: cmd. line:1: (print $7, $8, $9)
+awk: cmd. line:1:  ^ syntax error
+awk: cmd. line:2: (print $7, $8, $9)
+awk: cmd. line:2:                   ^ unexpected newline or end of string
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ find ~/ilovelinux/latihan -type f -name "*.log"-exec ls -lt{} + |awk '(print $7, $8, $9)'| head -n 1 > http.txt
+find: paths must precede expression: `ls'
+awk: cmd. line:1: (print $7, $8, $9)
+awk: cmd. line:1:  ^ syntax error
+awk: cmd. line:2: (print $7, $8, $9)
+awk: cmd. line:2:                   ^ unexpected newline or end of string
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ find ~/ilovelinux/latihan -type f -name "*.log"-exec ls -lt{} + |awk '(print $7, $8, $9)'| head -n 1 > http.txt
+find: paths must precede expression: `ls'
+awk: cmd. line:1: (print $7, $8, $9)
+awk: cmd. line:1:  ^ syntax error
+awk: cmd. line:2: (print $7, $8, $9)
+awk: cmd. line:2:                   ^ unexpected newline or end of string
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ top
+top - 23:29:42 up 11:28,  1 user,  load average: 0.00, 0.00, 0.00
+Tasks:  35 total,   1 running,  34 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni, 99.9 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+top - 23:29:50 up 11:28,  1 user,  load average: 0.00, 0.00, 0.00
+Tasks:  33 total,   1 running,  32 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.1 us,  0.1 sy,  0.0 ni, 99.9 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :   7824.3 total,   6862.0 free,    523.1 used,    439.1 buff/cache
+MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.   7081.4 avail Mem
+Which user (blank for all)
+    PID TTY      STAT   TIME COMMAND080   8136 S   0.0   0.1   0:01.27 systemd
+      1 ?        Ss     0:01 /sbin/init  10108 S   0.3   0.5   0:21.20 python3
+      2 ?        Sl     0:00 /init11080   8136 S   0.0   0.1   0:01.27 systemd
+      5 ?        Sl     0:00 plan9 --control-socket 6 --log-level 4 --server-fd 7 --pipe-fd 9 --log-truncate
+     43 ?        S<s                                                   ^C
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ ^Cdll           OpcServices.dll                OptionalFeatures.exe
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ ^CroxyStub.dll  OpenCL.dll                     OutdoorAudioEnvironment.bin
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ ^C              OpenWith.exe                   o ro,nodev,allow_other,suid
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ ^C              Optane.dll                     gtk-common-themes/1535 -o ro,nodev,allow_other,suid
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ ^C.dll          OptaneEventLogMsg.dll           -o ro,nodev,allow_other,suid
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ ^Cnapd/snaps/ubuntu-desktop-installer_1225.snap /snap/ubuntu-desktop-installer/1225 -o ro,nodev,allow_othetzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ ^Cnapd/snaps/ubuntu-desktop-installer_1227.snap /snap/ubuntu-desktop-installer/1227 -o ro,nodev,allow_othetzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ ^Cd-resolved.0   0:01.37 snapfuse
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ ^CP  0.0   0.2   0:00.26 systemd-resolve
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ ^Cem --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ ^Csr/bin/networkd-dispatcher --run-startup-triggers
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ ^C-n -iNONE0.2   0:00.30 networkd-dispat
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ ^Cd  0.0   0.1   0:00.08 rsyslogd
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ ^Cd-logind 0.8   0:02.51 snapd
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ ^Cntu-desktop-installer/1227/bin/subiquity-server
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ ^Csr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ ^C-- \u --noclear --keep-baud console 115200,38400,9600 vt220
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ ^C-- \u --noclear tty1 linuxtty
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ ^Cp-installer/1227/usr/bin/python3.10 -m subiquity.cmd.server --use-os-prober --storage-version=2 --postintzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ ^C   0.0   1.0   0:16.01 python3.10                                                ^C
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ ^Cd --user
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ ^C
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ ^C
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ ^Cu-desktop-installer/1227/usr/bin/cloud-init status --wait
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ ^C
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ ^C
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ ^C
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ ^C
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$ ^C
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$
+tzubast@LAPTOP-5CHCSEK3:~/ilovelinux/latihan$
